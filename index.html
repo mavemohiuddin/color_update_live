@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Custom color selector</title>
+</head>
+<body>
+
+    <div class="main absolute h-full w-full bg-red-100 flex flex-col items-center justify-center">
+        <p class="mb-2 text-xl">Selector:</p>
+        <div id="color_details" class="h-44 w-44 bg-white cursor-pointer relative">
+            <div class="color_grad bg-gradient-to-l from-[red] to-transparent w-full h-full absolute"></div>
+            <div class="bg-gradient-to-t from-black to-transparent w-full h-full absolute"></div>
+        </div>
+        <input type="range" min="0" max="360" step="1" value="0" class="hue mt-3 w-44">
+        <p class="mt-5 mb-2 text-xl">Output:</p>
+        <div class="output h-12 w-12 bg-white"></div>
+    </div>
+
+</body>
+</html>
