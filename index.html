@@ -13,15 +13,28 @@
 </head>
 <body>
 
-    <div class="main absolute h-full w-full bg-red-100 flex flex-col items-center justify-center">
-        <p class="mb-2 text-xl">Selector:</p>
-        <div id="color_details" class="h-44 w-44 bg-white cursor-pointer relative">
-            <div class="color_grad bg-gradient-to-l from-[red] to-transparent w-full h-full absolute"></div>
-            <div class="bg-gradient-to-t from-black to-transparent w-full h-full absolute"></div>
+    <div class="main absolute h-full w-full bg-red-100 flex items-center justify-center">
+        <div class="flex flex-col bg-white border border-gray-300 items-center justify-center px-8 py-5 rounded-md">
+            <p class="mb-2 text-xl">Selector:</p>
+            <div id="color_details" class="h-44 w-44 cursor-pointer relative shadow-xl shadow-gray-300">
+                <div class="color_grad bg-gradient-to-l from-[red] to-transparent w-full h-full absolute"></div>
+                <div class="bg-gradient-to-t from-black to-transparent w-full h-full absolute"></div>
+                <div class=" shadow-gray-400 shadow-md border-2 pointer-events-none border-white bg-transparent h-4 w-4 rounded-full absolute z-10 -translate-x-1/2 -translate-y-1/2 marker"></div>
+            </div>
+            <input type="range" min="0" max="360" step="1" value="0" class="hue mt-3 w-44">
+            <div class="flex gap-6 mt-12 items-center">
+                <div>
+                    <!-- <p class="mb-2 text-xl">Output:</p> -->
+                    <div class="output h-12 w-12 bg-white border"></div>
+                </div>
+                <div>
+                    <p class="color_hsl mb-1 text-sm">hsl(0, 0%, 100%)</p>
+                    <p class="color_rgb mb-1 text-sm">rgb(255, 255, 255)</p>
+                    <p class="color_hex text-sm">#ffffff</p>
+                </div>
+            </div>
         </div>
-        <input type="range" min="0" max="360" step="1" value="0" class="hue mt-3 w-44">
-        <p class="mt-5 mb-2 text-xl">Output:</p>
-        <div class="output h-12 w-12 bg-white"></div>
+        
     </div>
 
 </body>
